@@ -1,0 +1,288 @@
+Nav( import Search from '@mui/icons-material/Search';
+import Badge  from '@mui/material/Badge';
+import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
+import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
+import React from 'react';
+import styled from "styled-components";
+import mediaQPhone from '../mediaQ';
+
+const Link=styled.div``
+
+
+
+
+
+
+
+
+const Container= styled.div`
+    height: 60px;    
+    ${mediaQPhone.Phone}{}
+                          
+`
+ const Wrapper = styled.div`
+    
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+ `
+const Left = styled.div` 
+                        flex:1;
+                        align-items: center;
+                        display: flex ; 
+                        justify-content: space-between;
+                        font-family: 'Times New Roman', Times, serif;
+                        font-weight: 550;
+                        `
+
+const Cart =styled.div`cursor:pointer;`
+
+const Middle = styled.div`display: flex ; 
+                          justify-content: space-between;
+                          flex:1;
+                          align-items: center;
+
+                          ${mediaQPhone.Phone}{display:none;}
+                          
+                          
+                         `
+const  NvLink = styled.div` cursor:pointer;
+                        font-size: 14px;
+                        font-weight: 200; `
+
+
+const List = styled.div` margin-left:20px; `
+const Right = styled.div`flex:1;
+                         display:flex;
+                         align-items: center;
+                         justify-content: flex-end;
+                          `
+
+
+const SearchContainer = styled.section` border-radius: 40px;
+                                        color: white;
+                                        background-color: #41413e;
+                                        display: flex;
+                                        align-items:center;
+                                        margin-left: 20px;
+                                        padding: 5px;
+
+                                        &:hover > Input {
+                                        width: 100px;
+                                               }
+
+                                        
+                                        `
+
+const SearchButton = styled.div` 
+
+                                border-radius: 35px;
+                                
+                                background-color:  #41413e;
+                                display:flex;
+                                cursor:pointer;
+                                
+                                `
+
+const Input = styled.input` border:none;
+                            background-color:  #41413e;
+                            color:white;
+                            transition: 0.8s;
+                            width:0px;
+                            outline:none;
+                            font-size: 14px;                                                             
+                             `
+
+const Toggler = styled.div` display: none; cursor:pointer;
+                                    ${mediaQPhone.Phone}{ display:block; }
+                          `
+
+//const BottomNavCont = styled.div``
+//const Table = styled.table``
+
+const Line = styled.div` width : 0.5cm;
+                        height:0.05cm;
+                        margin: 0.05cm;
+                        background: black;
+                        
+                        `
+                    
+const L = styled.div``
+
+const LL = styled.div``
+
+const LLL = styled.div``
+
+const Navbar =()=>{ 
+
+    return(
+        <nav><Container><Wrapper>
+        <Left><Link to="/"><NvLink style={{color:"black", fontSize:20, fontWeight: 500}}>Modern Cotton</NvLink></Link></Left>
+        <Middle>
+       <NvLink style={{ fontWeight: 550}}>NEW</NvLink>
+        <NvLink>StreetWear</NvLink>
+        <NvLink>T-Shirts</NvLink>
+        <NvLink>Brands</NvLink>
+        <NvLink>ThriftHub</NvLink>
+        </Middle>
+        <Right>
+
+                <SearchContainer><Input type='' placeholder='Type to search'></Input><SearchButton><Search style={{color:"white", fontSize:20}}/></SearchButton>
+            
+            
+                </SearchContainer>
+                
+                <List><Cart>
+                <Badge badgeContent={2} color="primary">
+                <FavoriteBorderOutlinedIcon style={{ fontWeight: 100}} />
+                </Badge>
+                </Cart></List>
+
+                <List><Cart>
+                <Badge badgeContent={1} color="primary">
+                <ShoppingBagOutlinedIcon />
+                </Badge>
+                </Cart></List>
+                
+            <Toggler>
+                <L><Line/></L>
+                <LL><Line/></LL>
+                <LLL><Line/></LLL>
+
+            </Toggler>
+            
+            </Right></Wrapper></Container></nav>
+
+           )}
+
+export default Navbar;
+)
+
+
+
+
+
+
+
+Footer(import React from 'react';
+import styled from "styled-components";
+import mediaQPhone from '../mediaQ'
+
+
+const Login =styled.div` cursor:pointer;font-size: 14px; color: #8f8686;margin-left:20px;
+                            `
+
+const Top = styled.div`display:flex;`
+
+const Container =styled.div` height:220px;
+                              background-color: #363535;
+                              color:white;
+                              font-size:4;
+                              font-family: Arial, Helvetica, sans-serif;
+                              justify-content: center;
+                              align-items: center;
+                              bottom:0;
+                              width:100%;
+                              position:absolute;
+                              bottom:0;
+
+                              ${mediaQPhone.Phone}{}
+
+                              `
+
+const Left = styled.div` 
+                        flex:1;
+                        align-items: flex-start;
+                        display: flex; 
+                        justify-content: space-between;
+                        margin-left: 15px;
+                        `
+const Left1 = styled.div` 
+flex:1;
+align-items: center;
+left:10px;
+justify-content: space-between;
+margin-top: 0;
+
+`
+const Left2 = styled.div` 
+flex:1;
+align-items: center;
+justify-content: space-between;
+
+`
+const Centre = styled.div` 
+                        flex:1;
+                        align-items: center;
+                        display: flex ; 
+                        justify-content: space-between;
+                        
+                        `
+const Sites = styled.div` 
+                        
+                        align-items: center;
+                        display: flex ; 
+                        justify-content: space-between;
+                        
+                        `
+const Info = styled.div` 
+                        height:10px;
+                        align-items: center;
+                        display: flex ; 
+                        justify-content: space-between;
+                        font-size: 11px;
+                        color: grey;
+                        position:absolute;
+                        bottom: 15px;
+                        width: 100%;
+                        padding-left: 20px;
+                        padding-right: 15px;
+                        font-size:10px; 
+                        `
+
+const List = styled.div`  `
+const H4 = styled.h4`font-size:15px; font-weight: 400px; color:white;margin-left:20px;`
+const H1 = styled.div`flex:1; `
+const H2 = styled.div`flex:1 ;  `
+const H3 = styled.div`flex:1; `
+
+const Footer=()=>{
+    return(
+
+        <Container><Top>
+            <Left>
+                
+                <Left1><List><H4 >GET HELP</H4></List>
+            <p></p>
+            <List><Login>Order Status</Login></List>
+               <List><Login>Delivery</Login></List>
+               <List><Login>Returns</Login></List>
+               <List><Login>Payments</Login></List>
+               <List><Login>Contact Us</Login></List>
+              
+               
+               </Left1>
+               
+               <Left2><List><H4>FOLLOW US</H4></List>
+            <p></p>
+            <List><Login>Instagram</Login></List>
+               <List><Login>Twitter</Login></List>
+               <List><Login>Facebook</Login></List>
+               <List><Login>Pinterest</Login></List>
+               <List><Login>Tik-Tok</Login></List>
+               <List><Login>YouTube</Login></List>
+               
+               </Left2><Left2></Left2>
+
+               </Left>
+            <Centre></Centre></Top>
+
+            <Sites></Sites>
+            <Info><H2>SOUTH AFRICA</H2><H3>ALL RIGHTS RESERVED</H3><H1>Designed by <a href="https://www.ohwjaymusic.com">Omphilej</a>.</H1></Info>
+
+            
+        </Container>
+    )
+}
+
+export default Footer;)

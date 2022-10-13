@@ -1,32 +1,193 @@
-.App {
-  text-align: center;
-}
+#slider{align-items: center; }
+#item-title{font-size: 15px;}
+#category{font-size: 12px;}
+#item-title,#category{color: rgb(63, 61, 61);}
+
+
+#Technical > .Wrapper{ width: 60%; margin:auto}
+
+.App-Container{ scroll-behavior: smooth;
+                width:100%;
+                margin: 0;
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows:60px 1300px 710px;}
+
+
+
+nav{align-items: center; display: flex;  height:60px;}
+.linksCont{ right: 0; position:absolute;}
+.toggler-table{ right:0;margin-right: 0;}
+.toggler-table > div{ width:20px;
+                height:2px;
+                margin:0.3rem;
+                background:rgb(56, 56, 56);}
+
+.linksCont,.linksNav{display:flex;justify-content: space-between; width:350px;}
+.nav-bar { font-size: 15px; display: flex;}
+
+#About{ display:flex; justify-content: center;}
+main{display: grid; grid-template-rows: 800px 400px ; grid-template-columns: 100%;}
+
+.projects{ width:70%;
+            margin:0 auto;
+            margin-top:50px;
+            height: 500px;}
+
+.card{  
+       overflow:hidden;
+       height:250px;
+       color: black;}
+
+.About, .About-me{width:100%; display:flex; }
+.About{ padding-top: 100px;}
+.button{border: 1px 1px black;
+          background-color: white;cursor: pointer;}
+
+.About-me{margin:auto; justify-content: center; max-width: 400px; }
+  
+#img{ min-height: 150px;
+      max-height: 300px;
+      box-shadow: 10px 10px 2px;}
+
+.img-box{margin: 0; }
+      
+.About-me > p{font-size:20px;}
+.slick-slide > div { margin: 0 10px;}
+.slick-list {
+  margin: 0 -10px;}
+
+
+.text{ display:grid; grid-template-columns: 50% 50%;
+ }
+
+
+
+.card-top > img{ width:100%;
+                 height:100%;
+                 object-fit: cover;}
+
+
+       
+
+.linksCont{flex:1;  display: inline;
+           justify-content: space-between;
+           align-items: center;
+           padding-right: 100px;}
+
+.linksNav{flex:1;  display: flex;
+          flex-direction: row;
+          align-items: center;
+          padding-right: 100px;
+          
+           }
+.linksNav, .toggler-table{justify-content: flex-end;}
+ul>li{ margin: 0 20px; text-decoration: none; list-style: none; transition: 0.5s;}
+ul>li>a>img{ transition: 0.3s;}
+ul>li>a> img:hover{ transform: scale(130%);}
+.button> a{margin:3px;font-size:12;transition: 0.6s;}
+       
+.button> a{padding:1px 3px;border:2px solid black;color:black; text-decoration: none;}
+
+.button> a:visited{ color: black;}     
+.button>a:hover{ background-color: black; color:white;}
+
+.Home > a{ text-decoration: none;
+  color: black;
+ font-size: 13px;
+ font-weight: 200;}
+
+button{ width:105px;}
+
+.me{ display: flex; flex-direction: column; }
+
+.Navlogo{ margin-left: 10%; }
+
+a > img { height:30px;}
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  
+  margin: 0;
+  min-height:20px;
+  max-height:25px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+
+.contInfo{ display: flex; font-size: 7px; justify-content: center;}
+.contInfo > h1 { display: inline-block; margin: 20px;}
+
+#Wits{ height:100px;}
+
+.REACT{ height:50px;}
+
+#about-info{ font-size: 15px;
+              font-family:Arial, Helvetica, sans-serif;}
+
+
+h2, ul>li{ font-size: 12px;
+           text-align: center;}
+
+.h1Checkout{ text-align: center; color: rgb(75, 69, 69);}
+
+
+.bottom{ display:flex;
+         background-color: black;
+         flex-direction: row;
+         padding: 0 100px;
+         justify-content: space-between;
+         font-size: 10px;
+           
+           }
+
+.bottomdiv > h2{ font-weight: 100;}
+
+.About{margin:auto;
+
+        }
+p{ font-size:15px; color :rgb(71, 68, 68);}
+
+
+footer{ background-color: rgb(24, 24, 24);
+            color: darkgrey;
+           
+            bottom:0;
+           
+            margin: 0;}
+#Contacts { display:flex; align-items: center; flex-direction: row;}
+
+/**/
+.Container{ display:flex;  margin: 0; flex-direction: row; padding-top: 10px;}
+
+.cont, #contContacts { margin: auto;}
+.cont >img { justify-content: space-between;}
+
+#cont  { padding-top: 15px;}
+#social-links{ display: flex;width: 100%;}
+
+#social-links>ul{ margin: auto;}
+#social-links>ul>li{display: inline-block;}
+
+
+.TECHNICAL_SKILLS{  flex-direction: column;}
+
+#section-name{font-size:18px;}
+
+.ed-link{padding-bottom: 10px; padding-top: 0;}
+  .Education{   flex-direction: column; }
+  .ed-link > h1{ font-size:13px ;}
+ h1 > a{ text-decoration: none ; color: darkgrey ; font-weight: 400;}
+ #item-title > a{cursor: pointer; text-decoration: none ; color: rgb(75, 69, 69); font-weight: 600;}
+.Education> div>  h3{font-size: 12px;}
+/*@media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+}*/
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
+
+
+
 
 @keyframes App-logo-spin {
   from {
@@ -36,3 +197,127 @@
     transform: rotate(360deg);
   }
 }
+
+
+  
+@media only screen and (min-width: 771px) {
+  .Education{  align-items: center; }
+.wrapperW{ display: none;}
+  .TECHNICAL_SKILLS, .Education{ display:flex;justify-content: flex-start; margin-right: auto; left: 0;
+  }
+  
+
+  
+  .Navlogo{display:flex;justify-self: center;}
+  .toggler-table{ display: none; cursor:pointer; }
+  
+    nav{grid-template-columns:30% 0% 55%  ;
+          grid-gap: 0;} }
+          
+  
+@media only screen and (max-width: 770px) {
+
+  nav{grid-template-columns:f;
+    width: 100%;
+   }
+
+   .wrapperW{ display: none;}
+
+    
+  .toggler-table{  z-index:2;position:fixed; transition:0.3s; margin-left: auto; margin-right: 10px; }
+ .linksNav{position: fixed ;
+            top:0;
+            right:0;
+           
+            padding-top: 7vh;
+            margin:0;
+            
+            width: 350px;
+            height:100vh;
+            background: white;
+            border-left: 1px solid black;
+            flex-direction: column;
+            padding: 0;
+            justify-content: flex-start;
+            transform: translateX(100%);
+            transition:0.3s ease-in;
+            z-index: 1;
+           } 
+        
+
+      .linksNav>li{ margin-top: 30px ;}
+     
+
+    .nav_active{ transform: translateX(0);}
+
+   .toggle > .Line1{ transform: rotate(-45deg) translate( -4px, 6px);}
+   .toggle > .Line2{ opacity: 0;}
+   .toggle > .Line3{ transform: rotate(45deg) translate( -4px, -6px);}
+
+   .stroke1,.stroke2,.stroke3{ width:20px;
+    height:2px;
+    margin:0.3rem;
+    background:rgb(238, 230, 230);}
+
+  footer{ display: grid; grid-template-rows: 3f 3f 3f 1f; }
+}
+
+@media only screen and (max-width: 600px) {
+  .inLine{width: 100%; display: flex; flex-direction: row; align-items: center;}
+  .Wrapper{display: none;}
+  .wrapperW{margin-top:50px;display: block; color:white; padding-left: 30px; }
+  .text{ display: grid;
+    grid-template-columns: 100%;
+              grid-template-rows: 200px 350px;} 
+            .img-box{ display:flex; justify-content: center;}
+             #img{ min-height: 150px;
+              max-height: 230px;}
+
+              .App-Container{ display:flex; flex-direction: column;}
+                nav{height:60px; width:100%;}
+                main{width:100%; min-height:1470px; grid-template-rows: 1000px 400px ;}
+              
+                footer{ 
+                    width:100%;
+                      display:flex;
+                      height: 1fr;  
+                      flex-direction: column;
+                      margin-right: auto;
+                      left:0;
+                      background-color: rgb(24, 24, 24);
+                      
+                      }
+                      .wrapper2{ display: grid;
+                      grid-column: 100%;
+                      grid-template-rows: 1fr 1fr 1fr 1fr;
+                      color: black;}
+
+                      
+  .Navlogo{ z-index: 1.5;}
+
+  #footerIcon{ cursor:pointer;margin-left: auto;margin-right: 40px;}
+
+  .plusMinus{}
+
+  .press> .stroke{position: absolute;}
+  .press > #stroke1{ position: absolute;transform: rotate(0deg) translate( 2px 2px);}
+   
+   .press > #stroke2{position: absolute; transform: rotate(90deg) translate(-2px 1px);}
+
+  .boxActive{ height:35px; align-items: center; overflow: hidden;}
+  
+  .footerbox{ 
+    
+    height:1fr;
+    transition:0.3s ease-in;}
+
+}
+
+
+
+@media only screen and (max-width: 350px) {
+
+  .linksNav{position: fixed ;
+   
+    width: 100%;
+  }}
