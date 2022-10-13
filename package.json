@@ -1,4 +1,5 @@
 {
+  "homepage": "http://omphilejmatsobe.github.io/myreactportfolio",
   "name": "omphilej",
   "version": "0.1.0",
   "private": true,
@@ -20,12 +21,15 @@
     "react-loaders": "^3.0.1",
     "react-router-dom": "^6.3.0",
     "react-scripts": "^5.0.1",
+    "react-scroll": "^1.8.7",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

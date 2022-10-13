@@ -16,6 +16,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import {allMyProjects}  from './data';
+import {Link} from 'react-scroll';
 
 
 
@@ -88,15 +89,33 @@ function App() {
     contIcon3 === 'plusMinus3' ? setContIcon3('plusMinus3 press') : setContIcon3('plusMinus3');
    }
  
+   const [moreContainer , setMoreContainer] = useState('paragraph');
+   const [readmore, setReadMore] =useState('readmore');
+
+   const readMoreLess =()=>{
+
+    moreContainer === 'paragraph' ? setMoreContainer('paragraph expanded'): setMoreContainer('paragraph');
+    readmore === 'readmore' ? setReadMore('readmore expand') : setReadMore('readmore');
+   }
+
+   
   return (
     
     <div className='App-Container'>
         <nav class='nav-bar' id='nav-bar'>
           <div className='Navlogo'><img src={Logo} className='App-logo'/></div>
             <ul className={active}>
-             <li className='Home'><a href='#About-me' >ABOUT</a></li>
-             <li className='Home'><a href='#projects' >PROJECTS</a></li>
-             <li className='Home'><a href='#Technical' >TECHNICAL SKILLS</a></li>
+             <li className='Home'><Link to='info' spy={true} smooth={true} offset={50} duration={500}  >ABOUT</Link></li>
+             <li className='Home'><Link to='button' spy={true} smooth={true} offset={50} duration={500}  >PROJECTS</Link></li>
+             <li className='Home'><Link to='Technical' spy={true} smooth={true} offset={50} duration={500} >TECHNICAL SKILLS</Link></li>
+
+             <div id='social-links' className='tablelinks'><ul>
+          <li><a href='https://twitter.com/omphilejmatsobe' alt='twitter' target='_blank'><img src={twitter}/></a></li>
+          <li><a href='https://www.facebook.com/omphilejmatsobe' alt='facebook' target='_blank'><img src={facebook}/></a></li>
+          <li><a href='https://github.com/omphilejmatsobe' alt='github' target='_blank'><img src={github}/></a></li>
+          <li><a href='https://www.linkedin.com/in/omphilejmatsobe/' alt='linkedin' target='_blank'><img src={linkedin}/></a></li>
+        </ul></div>
+
           </ul>
         
         <div id='toggler' onClick={navToggle} className={toggleIcon}>
@@ -125,14 +144,14 @@ function App() {
 
 
         <div className='About-me' id='About-me'><div className='me'>
-          <h1>About Me</h1>
+          <h1 id='about-text'>About Me</h1>
 
-        <p>I am a Web developer, Html/Css and React , I am also an engineering student at University of the Witwatersrand for Game Design. 
+        <p id={moreContainer}>I am a Web developer, Html/Css and React , I am also an engineering student at University of the Witwatersrand for Game Design. 
           <br/>Besides school I am a dedicated programmer, I do freelance Work and also participate on other projects and hackathons.
-          <br/>Currently I am building my coding experience towards Web3 development as I am currently learning Solidity, learning how to write smart contracts and creating Web3 APIs.
+          <br/>Currently I am building my coding experience towards Web3 development as I am currently learning Solidity, learning how to write smart contracts and creating Web3 APIs, softwares and games.
           <br/>You can look through some of my work below, and also feel free to contact me if you would like to work on a project with me.
-        </p>
-        <div className='button'><a href='#Technical' >CONTACT ME</a></div>
+        </p><div onClick={readMoreLess} className={readmore} id='read'><h1>...read more</h1></div>
+        <div className='button'><Link to='Technical' spy={true} smooth={true} offset={50} duration={500} >CONTACT ME</Link></div>
         </div></div>
 
         
@@ -224,8 +243,8 @@ function App() {
         <div className='Contacts' id='majorCont'>
         <h2 class='CONTACT' id='section-name'>Contact</h2>
         <div id="contContacts"><div class="contInfo">
-        <h1>E-Mail: omphilejmatsobe@gmail.com</h1>
-        <h1>Contact #: (+27) 66 101 1483</h1>
+        <h1><span id='select'>E-Mail:</span> omphilejmatsobe@gmail.com</h1>
+        <h1><span id='select'>Contact #:</span> (+27) 66 101 1483</h1>
         <br/></div>
         </div>
 
@@ -248,7 +267,7 @@ function App() {
           <div className={container1}>
               <div className='inLine'>Technical Skills <div id='footerIcon' onClick={footContainer1} className={contIcon1}>
               <div className='stroke1' id='stroke1'></div>
-        <div className='stroke1' id='stroke2'></div></div>
+        </div>
         </div>
               <br/>
               <div>
@@ -264,16 +283,16 @@ function App() {
           <div className={container2}>
               <div className='inLine'>Education <div id='footerIcon' onClick={footContainer2} className={contIcon2}>
               <div className='stroke2' id='stroke1'></div>
-        <div className='stroke2' id='stroke2'></div></div>
+        </div>
         </div>
               <br/>
               <div>
 
               <div><div >
-        <h1><a href="" target='_blank'>freecodecamp</a></h1>
-        <h1><a href="" target='_blank'>Codecademy</a></h1>
+        <h1 id='anchorH'><a href="" target='_blank'>freecodecamp</a></h1>
+        <h1 id='anchorH'><a href="" target='_blank'>Codecademy</a></h1>
         <br/></div>
-        <h3>UNIVERSITY OF THE WITWATERSRAND</h3>
+        <h3 id='witsh3'>UNIVERSITY OF THE WITWATERSRAND</h3>
         <p>2021 - current</p>
         <p>B Eng Sc Digital Arts </p>
         <p>School of Electrical and Information Engineering</p>
@@ -284,14 +303,14 @@ function App() {
           </div>
           <div className={container3}>
               <div className='inLine'>Contacts<div id='footerIcon' onClick={footContainer3} className={contIcon3}>
-        <div className='stroke3' id='stroke1'></div>
-        <div className='stroke3' id='stroke2'></div></div>
+        <div className='stroke3' id='stroke1' ></div>
+        </div>
 
         </div>
               <br/>
               <div>
-              <h1>E-Mail: omphilejmatsobe@gmail.com</h1>
-        <h1>Contact #: (+27) 66 101 1483</h1>
+              <h1 id='details'><span id='detColor'>E-Mail:</span> omphilejmatsobe@gmail.com</h1>
+        <h1 id='details' ><span id='detColor'>Contact #:</span> (+27) 66 101 1483</h1>
               </div>
 
 
